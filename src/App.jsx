@@ -89,7 +89,10 @@ class EmailRow extends Component {
         <td>{this.props.data.subject}</td>
         <td>{this.props.data.content}</td>
         <td>{this.props.data.timestamp}</td>
-        <td>{this.props.data.sent && <Badge color="success" pill>Sent</Badge>}</td>
+        <td>{this.props.data.sent
+            ? <Badge color="success" pill>Sent</Badge>
+            : ""}
+        </td>
       </tr>
     )
   }
