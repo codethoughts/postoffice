@@ -88,7 +88,7 @@ class EmailRow extends Component {
         <td>{this.props.data.event_id}</td>
         <td>{this.props.data.subject}</td>
         <td>{this.props.data.content}</td>
-        <td>{this.props.data.timestamp}</td>
+        <td>{moment.utc(this.props.data.timestamp).local().format('lll')}</td>
         <td>{this.props.data.sent
             ? <Badge color="success" pill>Sent</Badge>
             : ""}
